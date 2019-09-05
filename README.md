@@ -7,11 +7,11 @@ Eat Up (tm) is a scrumptious social site for scheduling your snacking shindigs!!
 Anyone can browse Eat Up and view food related events, but to really harness the power, sign up and then sign in.  Being a registered user will allow you to create your own events that you'd like to draw the public to.  As a registered user you'll also be able to RSVP to events of interest to you so you don't miss a chance to attend those exciting edible endeavors!
 
 #### Links:
-[Deployed Site](https://team-cbam.github.io/eat-up-client/)
+[Deployed Site](https://drekaygran.github.io/eat-up/)
 
-[Back End Github Repo](https://github.com/team-cbam/eat-up-backend)
+[Back End Github Repo](https://github.com/drekaygran/eat-up-backend)
 
-[Back End Deployed Site](https://shielded-wildwood-50568.herokuapp.com/)
+[Back End Deployed Site](https://protected-coast-32234.herokuapp.com/)
 
 #### TECHNOLOGIES USED:
 - HTML
