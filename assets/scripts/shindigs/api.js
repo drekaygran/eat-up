@@ -3,36 +3,41 @@
 const config = require('../config')
 const store = require('../store')
 
-const uploadImage = formData => {
-  return $.ajax({
-    method: 'POST',
-    data: formData,
-    url: config.apiUrl + '/image-uploads',
-    contentType: false,
-    processData: false
-  })
-}
+// const uploadImage = formData => {
+//   return $.ajax({
+//     method: 'POST',
+//     data: formData,
+//     url: config.apiUrl + '/image-uploads',
+//     contentType: false,
+//     processData: false
+//   })
+// }
 
-const updateImage = imageURL => {
-  return $.ajax({
-    method: 'PATCH',
-    data: {
-      event: {
-        image: imageURL
-      }
-    },
-    url: config.apiUrl + '/events/' + store.current_event._id
-  })
-}
+// const updateImage = imageURL => {
+//   return $.ajax({
+//     method: 'PATCH',
+//     data: {
+//       event: {
+//         image: imageURL
+//       }
+//     },
+//     url: config.apiUrl + '/events/' + store.current_event._id
+//   })
+// }
 
 const createEvent = formData => {
+  for (const [key, value] of formData.entries()) {
+    console.log(key, value)
+  }
   return $.ajax({
     url: config.apiUrl + '/events',
-    data: {event: formData},
+    data: formData,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    method: 'POST'
+    method: 'POST',
+    contentType: false,
+    processData: false
   })
 }
 
@@ -40,6 +45,9 @@ const updateEvent = (formData) => {
   return $.ajax({
     url: config.apiUrl + '/events/' + store.event_id,
     method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    },
     data: {
       event: formData
     }
@@ -75,7 +83,7 @@ module.exports = {
   getAllEvents,
   deleteEvent,
   updateEvent,
-  openEvent,
-  uploadImage,
-  updateImage
+  openEvent
+  // uploadImage,
+  // updateImage
 }
