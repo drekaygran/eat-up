@@ -7,9 +7,11 @@
     "content": "CC­BY­NC­SA 4.0"
   },
   "dependencies": {
+    "assemble": "^0.24.3",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.1.2",
     "jquery": "^3.3.1",
+    "moment": "^2.24.0",
     "popper.js": "^1.14.3"
   },
   "devDependencies": {
@@ -34,6 +36,7 @@
     "grunt-shell": "^2.1.0",
     "grunt-webpack": "^3.0.2",
     "handlebars": "^4.0.11",
+    "handlebars-helper-moment": "^0.2.0",
     "handlebars-loader": "^1.6.0",
     "load-grunt-config": "^0.19.2",
     "node-libs-browser": "^2.1.0",
